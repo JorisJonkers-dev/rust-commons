@@ -54,6 +54,6 @@ PRINCIPAL_UPDATE=true task test
 ## Working on it
 
 ```bash
-mise install   # the toolchain: Rust (from rust-toolchain.toml), cargo-llvm-cov, task, actionlint, gitleaks
+mise install   # the toolchain: Rust, cargo-llvm-cov, task, actionlint, gitleaks
 task check     # everything CI runs
 ```
