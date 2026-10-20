@@ -1,6 +1,6 @@
 # Toolchain for local work and CI (jdx/mise-action). `mise install` is the only setup step.
 [tools]
-rust = "1.99.1"
+rust = { version = "1.99.1", components = "clippy,rustfmt,llvm-tools-preview" }
 "aqua:taiki-e/cargo-llvm-cov" = "0.9.1"
 task = "3.53.1"
 actionlint = "1.7.12"

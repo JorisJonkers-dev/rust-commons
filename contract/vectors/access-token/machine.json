@@ -1,0 +1,17 @@
+{
+  "description": "A Machine Identity's access token: kind machine, and no email or name.",
+  "issuer": "https://auth.example.test",
+  "client": "web",
+  "now": "2026-10-20T12:01:00Z",
+  "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsid2ViIl0sImNsaWVudF9pZCI6IndlYiIsImV4cCI6MTc5MjQ5ODUwMCwiaWF0IjoxNzkyNDk3NjAwLCJpc3MiOiJodHRwczovL2F1dGguZXhhbXBsZS50ZXN0IiwianRpIjoiYXQtMSIsImtpbmQiOiJtYWNoaW5lIiwibmJmIjoxNzkyNDk3NjAwLCJyb2xlcyI6WyJiYWNrdXAiXSwic3ViIjoiMDAwMDAwMDAtMDAwMC00MDAwLTgwMDAtMDAwMDAwMDAwMGI3IiwidHdvX2ZhY3RvciI6ZmFsc2UsInZlciI6IjEuMSIsInZpYSI6Im1hY2hpbmUifQ.PBxoWeNVSQ-Qn9haqOQPuSzDxF3iGBmEStlkhsYbu3Ej2IH5SEQqfmn0IJMDdEE75HmYjHdLQDmjO-UUGMagLzNzoGxSAWK-eM4UKehr99EwjAylIeo4sdzejTtK1PQh7HraPtc9auE55_N8ordk4uX_V4AUxTKU2DQNfUPq1X6JUjhX_iTC_FGkaTrfQ63Khg3pMpVK3elFy7pDDLBKopH6Crb6wb21CFLdyyuaMFCm3on7EnF-MhtV5fgYDyOZYOcmoNC_ilsVSeid3TTm83uTlOHCyogVsvjSh1gDga5oKg5KlH_z--mXEfh1qWribS8AhwaP3iqjK8mvv0tH3w",
+  "principal": {
+    "subject": "00000000-0000-4000-8000-0000000000b7",
+    "kind": "machine",
+    "roles": [
+      "backup"
+    ],
+    "via": "machine",
+    "twoFactor": false,
+    "ver": "1.1"
+  }
+}

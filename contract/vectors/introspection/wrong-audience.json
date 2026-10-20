@@ -1,0 +1,25 @@
+{
+  "description": "An answer for another Client is refused.",
+  "client": "web",
+  "answer": {
+    "active": true,
+    "aud": [
+      "grafana"
+    ],
+    "client_id": "grafana",
+    "email": "ada@example.org",
+    "email_verified": true,
+    "exp": 1795089600,
+    "kind": "user",
+    "name": "Ada",
+    "roles": [
+      "user"
+    ],
+    "sub": "00000000-0000-4000-8000-0000000000a1",
+    "token_type": "Bearer",
+    "two_factor": false,
+    "ver": "1.1",
+    "via": "personal-token"
+  },
+  "refusal": "wrong-audience"
+}

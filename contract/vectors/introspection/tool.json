@@ -1,0 +1,44 @@
+{
+  "description": "A Connected App's token, naming the tool acting for the User as act.",
+  "client": "web",
+  "answer": {
+    "act": {
+      "name": "Claude Code",
+      "sub": "mcp_6f1d0c2e"
+    },
+    "active": true,
+    "aud": [
+      "web"
+    ],
+    "client_id": "web",
+    "email": "ada@example.org",
+    "email_verified": true,
+    "exp": 1795089600,
+    "kind": "user",
+    "name": "Ada",
+    "roles": [
+      "user"
+    ],
+    "sub": "00000000-0000-4000-8000-0000000000a1",
+    "token_type": "Bearer",
+    "two_factor": false,
+    "ver": "1.1",
+    "via": "tool"
+  },
+  "principal": {
+    "subject": "00000000-0000-4000-8000-0000000000a1",
+    "kind": "user",
+    "email": "ada@example.org",
+    "name": "Ada",
+    "roles": [
+      "user"
+    ],
+    "via": "tool",
+    "actor": {
+      "id": "mcp_6f1d0c2e",
+      "name": "Claude Code"
+    },
+    "twoFactor": false,
+    "ver": "1.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "description": "A later minor version's token is read, and the claim the reader does not know is ignored.",
+  "issuer": "https://auth.example.test",
+  "client": "web",
+  "now": "2026-10-20T12:01:00Z",
+  "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsid2ViIl0sImNsaWVudF9pZCI6IndlYiIsImVtYWlsIjoiYWRhQGV4YW1wbGUub3JnIiwiZXhwIjoxNzkyNDk4NTAwLCJmdXR1cmUiOiJhIGxhdGVyIGNsYWltIiwiaWF0IjoxNzkyNDk3NjAwLCJpc3MiOiJodHRwczovL2F1dGguZXhhbXBsZS50ZXN0IiwianRpIjoiYXQtMSIsImtpbmQiOiJ1c2VyIiwibmFtZSI6IkFkYSIsIm5iZiI6MTc5MjQ5NzYwMCwicm9sZXMiOlsidXNlciJdLCJzaWQiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwYzEiLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwYTEiLCJ0d29fZmFjdG9yIjp0cnVlLCJ0d29fZmFjdG9yX2F0IjoxNzkyNDk2NzAwLCJ2ZXIiOiIxLjIiLCJ2aWEiOiJzZXNzaW9uIn0.Y2F3xek1fslaMYVvujZD3rtyXSWaVApP3GXjCJytk9HuMRU49Ij8DdULqFUdAsjiqJL7dUkmSkqx7S6vqC9-ku4gR4sN-GQEanFL2fe_0RV5BZ9dkvm5vEPaELEmFGk8WvjXQGEtVfs8X6_YIRU4vEpKvoFx_WZX6thYF1fT0NUiShZ_fpdOUk8xywL9gut-REV-0etM16xHnpNDyOE8RJRNXc88OLN9pdmwS8egYN4Jn1FDvUYJa2VMVXHycUEPvXKZewq-MB5CLdUvMKGAP7ZieYUbw5wl3vwpQH69g3tlAiaE28IZO9rC3exkxkdIQ9nxjCcmwxwFhIZ2uBAzjw",
+  "principal": {
+    "subject": "00000000-0000-4000-8000-0000000000a1",
+    "kind": "user",
+    "email": "ada@example.org",
+    "name": "Ada",
+    "roles": [
+      "user"
+    ],
+    "via": "session",
+    "twoFactor": true,
+    "twoFactorAt": "2026-10-20T11:45:00Z",
+    "sid": "00000000-0000-4000-8000-0000000000c1",
+    "ver": "1.2"
+  }
+}

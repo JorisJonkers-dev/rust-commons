@@ -1,0 +1,26 @@
+{
+  "description": "A Machine Identity calling with its own credential.",
+  "issuer": "https://auth.example.test",
+  "client": "wiki",
+  "now": "2026-10-20T12:00:30Z",
+  "headers": {
+    "X-Auth-Request-Actor": "",
+    "X-Auth-Request-Email": "",
+    "X-Auth-Request-Kind": "machine",
+    "X-Auth-Request-Name": "",
+    "X-Auth-Request-Roles": "backup",
+    "X-Auth-Request-User": "00000000-0000-4000-8000-0000000000b7",
+    "X-Auth-Request-Via": "machine",
+    "X-Identity-Principal": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJpZGVudGl0eS1wcmluY2lwYWwrand0In0.eyJhdWQiOiJ3aWtpIiwiZXhwIjoxNzkyNDk3NjYwLCJpYXQiOjE3OTI0OTc2MDAsImlzcyI6Imh0dHBzOi8vYXV0aC5leGFtcGxlLnRlc3QiLCJraW5kIjoibWFjaGluZSIsInJvbGVzIjpbImJhY2t1cCJdLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwYjciLCJ0d29fZmFjdG9yIjpmYWxzZSwidmVyIjoiMS4xIiwidmlhIjoibWFjaGluZSJ9.LILh8lR3UI1eRoqmSafJfoakmyDKe3Z_-gO0Gqk1rBoXpUi8vBUNjuPaF1jBaNhTwPcHQsu2NAvOh99IYsTWz02gBx2m2rxLR14E5Em5H3s45TxclrVAuWjznbKh9SmKUwzn2sPR8pidtxnBGaIKHj7cIQ5Pk_d3OjC7fLxLkjjtzAdxANX8LGdR5lyFPrqwvbrLoPAnZkyWN3Tf3__YdFMA-sezxPfTtdVyr89RN5P0ZqyP6dcY1eGvY9rtGEwUpmHZDh5ff0Wp-PCaAX3CAAMF4DFN7sTpZ4KJXLJvsq1_WB0Fe8rrmVCZzsheyei677Fs404QrAt47N1J0VGBrA"
+  },
+  "principal": {
+    "subject": "00000000-0000-4000-8000-0000000000b7",
+    "kind": "machine",
+    "roles": [
+      "backup"
+    ],
+    "via": "machine",
+    "twoFactor": false,
+    "ver": "1.1"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "description": "A tool acting for a User, named as the actor.",
+  "issuer": "https://auth.example.test",
+  "client": "wiki",
+  "now": "2026-10-20T12:00:30Z",
+  "headers": {
+    "X-Auth-Request-Actor": "Claude Code",
+    "X-Auth-Request-Email": "ada@example.org",
+    "X-Auth-Request-Kind": "user",
+    "X-Auth-Request-Name": "Ada Lovelace",
+    "X-Auth-Request-Roles": "user,editor",
+    "X-Auth-Request-User": "00000000-0000-4000-8000-0000000000a1",
+    "X-Auth-Request-Via": "tool",
+    "X-Identity-Principal": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJpZGVudGl0eS1wcmluY2lwYWwrand0In0.eyJhY3QiOnsibmFtZSI6IkNsYXVkZSBDb2RlIiwic3ViIjoibWNwXzZmMWQwYzJlIn0sImF1ZCI6Indpa2kiLCJlbWFpbCI6ImFkYUBleGFtcGxlLm9yZyIsImV4cCI6MTc5MjQ5NzY2MCwiaWF0IjoxNzkyNDk3NjAwLCJpc3MiOiJodHRwczovL2F1dGguZXhhbXBsZS50ZXN0Iiwia2luZCI6InVzZXIiLCJuYW1lIjoiQWRhIExvdmVsYWNlIiwicm9sZXMiOlsidXNlciIsImVkaXRvciJdLCJzdWIiOiIwMDAwMDAwMC0wMDAwLTQwMDAtODAwMC0wMDAwMDAwMDAwYTEiLCJ0d29fZmFjdG9yIjpmYWxzZSwidmVyIjoiMS4xIiwidmlhIjoidG9vbCJ9.0JcmFCUTnLrf0zkxq5dmSThBLYypBuoUwH3aFycMcjQt8nId2V-lrWveABIVI2ZSIRvcZBQg7AX76CMere6vbpTkUB8YCgSbvHW8eSlwIuTPiRSC5SW6Djdezg6y6boHpMOnDTR_kABM1Dfu9bXgPrpSL496sINRGGDCOLD7Q8h8bIePiGLYs3_UuQf-kMDoo9WTVklPoUQgrpmsec7iPZJvd6x6S4Opvww7udhPb3lRxS1ahk17BCXzOPw4gXB43-R7TSKnUXJ1u-foiwN7o1CL22owPAwRQpnKrAJiy3zmrXeudsXusJV6Dpx6V6Qt92ysWs2JxJwiPeBNF0giCA"
+  },
+  "principal": {
+    "subject": "00000000-0000-4000-8000-0000000000a1",
+    "kind": "user",
+    "email": "ada@example.org",
+    "name": "Ada Lovelace",
+    "roles": [
+      "user",
+      "editor"
+    ],
+    "via": "tool",
+    "actor": {
+      "id": "mcp_6f1d0c2e",
+      "name": "Claude Code"
+    },
+    "twoFactor": false,
+    "ver": "1.1"
+  }
+}

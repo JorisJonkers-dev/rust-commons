@@ -1,0 +1,8 @@
+{
+  "description": "A token identity answers inactive carries no Principal.",
+  "client": "web",
+  "answer": {
+    "active": false
+  },
+  "refusal": "inactive"
+}

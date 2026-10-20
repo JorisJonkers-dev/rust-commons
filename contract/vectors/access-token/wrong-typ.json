@@ -1,0 +1,8 @@
+{
+  "description": "The Gate's signed Principal, or any JWT not typed JWT, is no access token.",
+  "issuer": "https://auth.example.test",
+  "client": "web",
+  "now": "2026-10-20T12:01:00Z",
+  "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJpZGVudGl0eS1wcmluY2lwYWwrand0In0.eyJhdWQiOlsid2ViIl0sImNsaWVudF9pZCI6IndlYiIsImVtYWlsIjoiYWRhQGV4YW1wbGUub3JnIiwiZXhwIjoxNzkyNDk4NTAwLCJpYXQiOjE3OTI0OTc2MDAsImlzcyI6Imh0dHBzOi8vYXV0aC5leGFtcGxlLnRlc3QiLCJqdGkiOiJhdC0xIiwia2luZCI6InVzZXIiLCJuYW1lIjoiQWRhIiwibmJmIjoxNzkyNDk3NjAwLCJyb2xlcyI6WyJ1c2VyIl0sInNpZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBjMSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBhMSIsInR3b19mYWN0b3IiOnRydWUsInR3b19mYWN0b3JfYXQiOjE3OTI0OTY3MDAsInZlciI6IjEuMSIsInZpYSI6InNlc3Npb24ifQ.gGiY7c8PXRG75alXcsGdhJiVPC0g7Aqr98IesVDyvtOGmYjMPq7jrUHWvMOOGn38tNrUBNK6Oyk-qaw9bCPjlmgX_35sa_zFDnK7l1G-hS-DWMyUUzKhvuctA56N6b37xAPO6tKnN61AK7lDMAxMI7UCT3gII3gVNeX7PT0x9f-WG-Al21fJfXoXIz4KG2mLHMkfhhgP-FSfWTo2bZ0nPgd9hQV9SY5XksDnMbXVkz_bDvunRvl83ZQkBUSrw1LgF7f-fp45oacSbeZgtphM1aPoesraxlfgGxI2FBcnwcEBXN_-pgqnmOUznxDkSs7QaFmczL41plDGVkKCGatWjQ",
+  "refusal": "wrong-typ"
+}
