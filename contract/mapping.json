@@ -1,0 +1,86 @@
+{
+  "version": "1.1",
+  "signedHeader": {
+    "header": "X-Identity-Principal",
+    "typ": "identity-principal+jwt",
+    "alg": ["RS256"],
+    "lifetimeSeconds": 60,
+    "claims": {
+      "iss": "the Issuer",
+      "aud": "the Client the request is for",
+      "iat": "when the Gate signed it",
+      "exp": "iat + lifetimeSeconds"
+    }
+  },
+  "fields": {
+    "subject": { "claim": "sub", "header": "X-Auth-Request-User" },
+    "kind": { "claim": "kind", "header": "X-Auth-Request-Kind" },
+    "email": { "claim": "email", "header": "X-Auth-Request-Email" },
+    "name": { "claim": "name", "header": "X-Auth-Request-Name" },
+    "roles": { "claim": "roles", "header": "X-Auth-Request-Roles", "headerFormat": "comma-separated" },
+    "via": { "claim": "via", "header": "X-Auth-Request-Via" },
+    "actor": {
+      "claim": "act",
+      "claimFormat": "RFC 8693 act: {\"sub\": actor.id, \"name\": actor.name}",
+      "header": "X-Auth-Request-Actor",
+      "headerFormat": "actor.name"
+    },
+    "twoFactor": { "claim": "two_factor" },
+    "twoFactorAt": { "claim": "two_factor_at", "claimFormat": "NumericDate; the Principal states it as RFC 3339 UTC" },
+    "sid": { "claim": "sid" },
+    "ver": { "claim": "ver" }
+  },
+  "plainHeaders": {
+    "rule": "The Gate sets every plain header on every allowed answer, empty when the field has no value, so a caller's copy of a header can never stand in for one the Gate left out. A reader of the contract reads only the signed header.",
+    "headers": [
+      "X-Auth-Request-User",
+      "X-Auth-Request-Email",
+      "X-Auth-Request-Name",
+      "X-Auth-Request-Roles",
+      "X-Auth-Request-Kind",
+      "X-Auth-Request-Via",
+      "X-Auth-Request-Actor"
+    ]
+  },
+  "stepUp": {
+    "path": "/.auth/step-up",
+    "query": {
+      "minutes": "how recent the two-factor proof must be, 1 to 60",
+      "rd": "the path on the app's own host to come back to"
+    },
+    "rule": "An app that needs a fresher proof than a Principal states redirects the browser to this path on its own host. The person comes back to rd once the session proved two-factor within minutes, and the first Gate check after it states the new twoFactorAt. A Principal that came by personal-token, tool or machine cannot step up: the app answers 403 without a redirect."
+  },
+  "accessToken": {
+    "typ": "JWT",
+    "alg": ["RS256"],
+    "rule": "Since contract 1.1, a JWT access token for a User or a Machine Identity carries the Principal's claims beside its registered ones (iss, sub, aud, exp, client_id). zitadel/oidc signs access tokens and ID tokens alike as typ JWT, so a reader tells an access token by its client_id claim, which an ID token does not carry.",
+    "refusals": {
+      "wrong-typ": "The JWT's typ is not JWT, such as the Gate's signed Principal.",
+      "not-an-access-token": "The JWT names no client_id, as an ID token does not.",
+      "wrong-issuer": "iss is not the Issuer.",
+      "wrong-audience": "aud is not exactly the reader's own Client.",
+      "expired": "The reader's clock is at or past exp.",
+      "unknown-key": "No key in the Issuer's JWKS has the JWT's kid.",
+      "bad-signature": "The signature does not verify with the key the kid names.",
+      "unknown-major": "ver names a major version the reader does not know, or is absent."
+    }
+  },
+  "introspection": {
+    "rule": "Since contract 1.1, identity's answer at /oidc/introspect (RFC 7662) for a Personal Token or a Connected App's token carries the Principal's claims. A reader authenticates as its own Client and may keep an answer for at most 30 seconds.",
+    "refusals": {
+      "inactive": "The answer is active: false.",
+      "wrong-audience": "client_id or aud is not the reader's own Client.",
+      "unknown-major": "ver names a major version the reader does not know, or is absent."
+    }
+  },
+  "refusals": {
+    "missing": "No signed header, whatever plain headers the request carries.",
+    "wrong-typ": "The JWT's typ is not identity-principal+jwt.",
+    "wrong-issuer": "iss is not the Issuer.",
+    "wrong-audience": "aud is not the reader's own Client.",
+    "expired": "The reader's clock is at or past exp.",
+    "unknown-key": "No key in the Issuer's JWKS has the JWT's kid.",
+    "bad-signature": "The signature does not verify with the key the kid names.",
+    "unknown-major": "ver names a major version the reader does not know."
+  }
+}

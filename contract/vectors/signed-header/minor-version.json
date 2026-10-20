@@ -1,0 +1,30 @@
+{
+  "description": "A later minor version's Principal is read, and the field the reader does not know is ignored.",
+  "issuer": "https://auth.example.test",
+  "client": "wiki",
+  "now": "2026-10-20T12:00:30Z",
+  "headers": {
+    "X-Auth-Request-Actor": "",
+    "X-Auth-Request-Email": "ada@example.org",
+    "X-Auth-Request-Kind": "user",
+    "X-Auth-Request-Name": "Ada Lovelace",
+    "X-Auth-Request-Roles": "user,editor",
+    "X-Auth-Request-User": "00000000-0000-4000-8000-0000000000a1",
+    "X-Auth-Request-Via": "session",
+    "X-Identity-Principal": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJpZGVudGl0eS1wcmluY2lwYWwrand0In0.eyJhdWQiOiJ3aWtpIiwiZW1haWwiOiJhZGFAZXhhbXBsZS5vcmciLCJleHAiOjE3OTI0OTc2NjAsImZ1dHVyZSI6ImEgZmllbGQgYSBsYXRlciBtaW5vciB2ZXJzaW9uIGFkZHMiLCJpYXQiOjE3OTI0OTc2MDAsImlzcyI6Imh0dHBzOi8vYXV0aC5leGFtcGxlLnRlc3QiLCJraW5kIjoidXNlciIsIm5hbWUiOiJBZGEgTG92ZWxhY2UiLCJyb2xlcyI6WyJ1c2VyIiwiZWRpdG9yIl0sInNpZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBjMSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBhMSIsInR3b19mYWN0b3IiOmZhbHNlLCJ2ZXIiOiIxLjIiLCJ2aWEiOiJzZXNzaW9uIn0.KnR0Yd4_gYNX3GehQJHg-pVB3NVFTvEjS09VCq0AkBCINAMfSYHd-gKh4qUiZNwtV2M_i1pchYjQb0hB0WZEf_KJyRVIhJ5IPJ_KfSRoZrEzyr2gZOpv8Yzb0geRfcMi3LKselUEvNPJ_0BF0q9oHNT-OcpMVHyJjo6ttyizDpJH7OGIaeT_f5x0KzV7lRUFHZzLgP4hk1yekc6SaYc5fK1KsTo1QRa5OsWo3dOlnqwOtRJ6gImQxGcHZ6fTXvcOlT3fjoRbrtN6V1BH_wGDgoKFJFm3SQtUNz1ovJPgJlCNYfBjzUo6JlNOtygdEmMkKrfToyrcp8J-CkG9maOodw"
+  },
+  "principal": {
+    "subject": "00000000-0000-4000-8000-0000000000a1",
+    "kind": "user",
+    "email": "ada@example.org",
+    "name": "Ada Lovelace",
+    "roles": [
+      "user",
+      "editor"
+    ],
+    "via": "session",
+    "twoFactor": false,
+    "sid": "00000000-0000-4000-8000-0000000000c1",
+    "ver": "1.2"
+  }
+}

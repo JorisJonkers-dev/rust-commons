@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/JorisJonkers-dev/identity/blob/main/contract/principal/principal.schema.json",
+  "title": "Principal",
+  "description": "Who is calling an application, as identity states it on every channel. Contract major version 1; a minor version only adds optional fields, which a reader ignores when it does not know them.",
+  "type": "object",
+  "required": ["subject", "kind", "roles", "via", "twoFactor", "ver"],
+  "properties": {
+    "subject": {
+      "description": "The User's or Machine Identity's id.",
+      "type": "string",
+      "minLength": 1
+    },
+    "kind": {
+      "description": "Whether a person or a workload is calling.",
+      "enum": ["user", "machine"]
+    },
+    "email": {
+      "description": "The User's sign-in email.",
+      "type": "string",
+      "format": "email"
+    },
+    "name": {
+      "description": "The User's name.",
+      "type": "string"
+    },
+    "roles": {
+      "description": "The App Roles the caller holds on the Client the request is for, and no other Client's.",
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "via": {
+      "description": "How the caller signed in: a Single sign-on session, a Personal Token, a tool acting for the User, or a Machine Identity's own credential.",
+      "enum": ["session", "personal-token", "tool", "machine"]
+    },
+    "actor": {
+      "description": "For via tool, the tool acting for the User: its registration's client id and the name it registered with.",
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string" }
+      }
+    },
+    "twoFactor": {
+      "description": "Whether the session proved two-factor.",
+      "type": "boolean"
+    },
+    "twoFactorAt": {
+      "description": "When the session last proved two-factor.",
+      "type": "string",
+      "format": "date-time"
+    },
+    "sid": {
+      "description": "The Single sign-on session, for via session.",
+      "type": "string",
+      "minLength": 1
+    },
+    "ver": {
+      "description": "The contract version the Principal was stated in, as major.minor.",
+      "type": "string",
+      "pattern": "^1\\.(0|[1-9][0-9]*)$"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "kind": { "const": "user" } } },
+      "then": { "required": ["email", "name"], "properties": { "via": { "not": { "const": "machine" } } } }
+    },
+    {
+      "if": { "properties": { "kind": { "const": "machine" } } },
+      "then": { "properties": { "via": { "const": "machine" } } }
+    },
+    {
+      "if": { "properties": { "via": { "const": "tool" } } },
+      "then": { "required": ["actor"] },
+      "else": { "not": { "required": ["actor"] } }
+    },
+    {
+      "if": { "properties": { "via": { "const": "session" } } },
+      "then": { "required": ["sid"] },
+      "else": { "not": { "required": ["sid"] } }
+    },
+    {
+      "if": { "properties": { "twoFactor": { "const": true } } },
+      "then": { "required": ["twoFactorAt"] },
+      "else": { "not": { "required": ["twoFactorAt"] } }
+    }
+  ]
+}

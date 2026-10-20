@@ -9,6 +9,10 @@ useDefault = true
 description = "Global allowlist"
 paths = [
   '''(.*?)(example|sample|fixture|test)(.*?)\.(env|json|ya?ml)$''',
+  # identity's conformance vectors, vendored by scripts/pin-contract.sh: tokens signed by a test key.
+  '''^contract/vectors/''',
+  # The key the reader's own tests sign with.
+  '''^tests/testdata/''',
 ]
 regexes = [
   '''EXAMPLE_[A-Z0-9_]+''',

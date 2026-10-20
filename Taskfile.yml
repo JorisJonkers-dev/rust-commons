@@ -1,6 +1,10 @@
 # One command per loop. `task` lists targets; `task check` is what CI runs.
 version: "3"
 
+vars:
+  # The crate is held to this much line coverage.
+  COVERAGE_MIN: 95
+
 tasks:
   default:
     cmd: task --list
@@ -9,11 +13,24 @@ tasks:
   lint:
     desc: All linters
     cmds:
+      - task: lint:rust
       - task: lint:actions
+
+  lint:rust:
+    desc: rustfmt, clippy (pedantic, warnings denied) with and without the default features, and rustdoc
+    cmds:
+      - cargo fmt --check
+      - cargo clippy --locked --all-targets -- -D warnings
+      - cargo clippy --locked --all-targets --no-default-features -- -D warnings
+      - RUSTDOCFLAGS="-D warnings" cargo doc --locked --no-deps
 
   lint:actions:
     desc: actionlint on every workflow
     cmd: actionlint
+
+  test:
+    desc: The tests with a {{.COVERAGE_MIN}}% line coverage gate
+    cmd: cargo llvm-cov --locked --fail-under-lines {{.COVERAGE_MIN}} --show-missing-lines
 
   secrets:
     desc: Scan the working tree for secrets
@@ -23,4 +40,11 @@ tasks:
     desc: Everything CI runs on a pull request
     cmds:
       - task: lint
+      - task: test
       - task: secrets
+
+  fix:
+    desc: Apply formatters and autofixes
+    cmds:
+      - cargo fmt
+      - cargo clippy --fix --allow-dirty --all-targets

@@ -1,0 +1,8 @@
+{
+  "description": "An ID token, which names no client_id, is no access token.",
+  "issuer": "https://auth.example.test",
+  "client": "web",
+  "now": "2026-10-20T12:01:00Z",
+  "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsid2ViIl0sImVtYWlsIjoiYWRhQGV4YW1wbGUub3JnIiwiZXhwIjoxNzkyNDk4NTAwLCJpYXQiOjE3OTI0OTc2MDAsImlzcyI6Imh0dHBzOi8vYXV0aC5leGFtcGxlLnRlc3QiLCJqdGkiOiJhdC0xIiwia2luZCI6InVzZXIiLCJuYW1lIjoiQWRhIiwibmJmIjoxNzkyNDk3NjAwLCJyb2xlcyI6WyJ1c2VyIl0sInNpZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBjMSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBhMSIsInR3b19mYWN0b3IiOnRydWUsInR3b19mYWN0b3JfYXQiOjE3OTI0OTY3MDAsInZlciI6IjEuMSIsInZpYSI6InNlc3Npb24ifQ.Mf2JTjmg707BUvK4T17GKAUs-SeUpszVlBj0Y-zvXz2RG-6d9dWBBurnaQzs6f79mQjZFhCjhKFLd4AQX23xxZWlDiyZcKqNCPs67xRqXZ0njUuDVcM-thnBIdkN4BUk3bEHkHWn49nUqhm2bPnkN-dZx6tbfo9XKlNsH6yGKReLa3qgWZoOGgK_OX1hKcpzg8e67bccGNqwTP76jFIJ9B48SeuGZX8gH_Na0EFad3LJcHKJH1hTshC54kP47eiXjLdOUbwsLZu0bWLZ6RM4SIs8ZnYgMiXBLVKFgB7Y8XOIbjhcuLDzefHGbiPtWkFsG6KfoqiLosSqvrLwIClP4Q",
+  "refusal": "not-an-access-token"
+}

@@ -1,0 +1,17 @@
+{
+  "description": "A Principal signed for another Client is refused.",
+  "issuer": "https://auth.example.test",
+  "client": "wiki",
+  "now": "2026-10-20T12:00:30Z",
+  "headers": {
+    "X-Auth-Request-Actor": "",
+    "X-Auth-Request-Email": "ada@example.org",
+    "X-Auth-Request-Kind": "user",
+    "X-Auth-Request-Name": "Ada Lovelace",
+    "X-Auth-Request-Roles": "user,editor",
+    "X-Auth-Request-User": "00000000-0000-4000-8000-0000000000a1",
+    "X-Auth-Request-Via": "session",
+    "X-Identity-Principal": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJpZGVudGl0eS1wcmluY2lwYWwrand0In0.eyJhdWQiOiJncmFmYW5hIiwiZW1haWwiOiJhZGFAZXhhbXBsZS5vcmciLCJleHAiOjE3OTI0OTc2NjAsImlhdCI6MTc5MjQ5NzYwMCwiaXNzIjoiaHR0cHM6Ly9hdXRoLmV4YW1wbGUudGVzdCIsImtpbmQiOiJ1c2VyIiwibmFtZSI6IkFkYSBMb3ZlbGFjZSIsInJvbGVzIjpbInVzZXIiLCJlZGl0b3IiXSwic2lkIjoiMDAwMDAwMDAtMDAwMC00MDAwLTgwMDAtMDAwMDAwMDAwMGMxIiwic3ViIjoiMDAwMDAwMDAtMDAwMC00MDAwLTgwMDAtMDAwMDAwMDAwMGExIiwidHdvX2ZhY3RvciI6ZmFsc2UsInZlciI6IjEuMSIsInZpYSI6InNlc3Npb24ifQ.GBCGlV5nllPbUaMqcitEiwb6NMcQjlskGwVqsmLvt9Q76k-enYuoJ_qyM9S-vHLQKWuyCp56dapCFkEt8MQ13bhiFsXoe_zt50RtWNR3sugFujHHLbsSbcJ3atdGQZ2MSrtIB52JHURSrFM2mjs2T3TaOjfVGpJuUjjAWcJxSzREK22JC10h3ML7xl5mZ4Vz4oQRxaxfBinMo1gYS-uQaX_UMCbFb-X8oEwqxUAqvahlN4oCXfIgjzHWeBmrVtbLYq0rkpik3Ecyx5VLVxOJyUzYTAj7dED7i0-83-cJxIKzMnUjdJM4YddkuVgt9jsZC60pZj9In-Yn4aj2Wu0gzA"
+  },
+  "refusal": "wrong-audience"
+}

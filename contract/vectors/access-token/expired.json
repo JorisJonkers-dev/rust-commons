@@ -1,0 +1,8 @@
+{
+  "description": "A token read at the moment it expires is refused.",
+  "issuer": "https://auth.example.test",
+  "client": "web",
+  "now": "2026-10-20T12:15:00Z",
+  "token": "eyJhbGciOiJSUzI1NiIsImtpZCI6InZlY3Rvci1pc3N1ZXIiLCJ0eXAiOiJKV1QifQ.eyJhdWQiOlsid2ViIl0sImNsaWVudF9pZCI6IndlYiIsImVtYWlsIjoiYWRhQGV4YW1wbGUub3JnIiwiZXhwIjoxNzkyNDk4NTAwLCJpYXQiOjE3OTI0OTc2MDAsImlzcyI6Imh0dHBzOi8vYXV0aC5leGFtcGxlLnRlc3QiLCJqdGkiOiJhdC0xIiwia2luZCI6InVzZXIiLCJuYW1lIjoiQWRhIiwibmJmIjoxNzkyNDk3NjAwLCJyb2xlcyI6WyJ1c2VyIl0sInNpZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBjMSIsInN1YiI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDBhMSIsInR3b19mYWN0b3IiOnRydWUsInR3b19mYWN0b3JfYXQiOjE3OTI0OTY3MDAsInZlciI6IjEuMSIsInZpYSI6InNlc3Npb24ifQ.xEqJRTB3ynRjYFaabbr0aZNLKQdRVX6cJ5j3Onhbm4PnvQvwFtoi2YPNWK482B45vqgEcYtGBmhmU2Ve2qu28zHEWAq-94wVDvtnP29-ietc439sTaUv0-SXzsXKYryoZyW32-JtoIP1bLpi5iRQJbm4PuG0QhaTOE7YN4AL-Fd-SKbia7UChRHMMxR7aQ1QKH6zeQDKzJSDYgObob0ah8Dn7FftUBLEDK5xO-aUwDIqyO0SWCm2GaTM9ceZlLlRD_i8GT6OHt63J-0K-4Cu6xWRf9wYHPRzt8Tt6npchsntfx---rsUf_IhULtxO-ibvNfW-4yc1ULVcuWtOPZjqg",
+  "refusal": "expired"
+}
