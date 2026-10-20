@@ -1,0 +1,26 @@
+# One command per loop. `task` lists targets; `task check` is what CI runs.
+version: "3"
+
+tasks:
+  default:
+    cmd: task --list
+    silent: true
+
+  lint:
+    desc: All linters
+    cmds:
+      - task: lint:actions
+
+  lint:actions:
+    desc: actionlint on every workflow
+    cmd: actionlint
+
+  secrets:
+    desc: Scan the working tree for secrets
+    cmd: gitleaks dir --no-banner --redact .
+
+  check:
+    desc: Everything CI runs on a pull request
+    cmds:
+      - task: lint
+      - task: secrets
