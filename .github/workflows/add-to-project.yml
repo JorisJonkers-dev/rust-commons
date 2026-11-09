@@ -33,7 +33,7 @@
 
 'jobs':
   'add-to-project':
-    'uses': 'JorisJonkers-dev/github-workflows/.github/workflows/add-to-project.yml@f8f0a5ae583913de18143bbbbe0db9ecab970435' # v0.45.0
+    'uses': 'JorisJonkers-dev/github-workflows/.github/workflows/add-to-project.yml@183d218b87bcbbc2a21dddd51340828fb8cbc027' # v0.45.0
     'with':
       'project-url': 'https://github.com/orgs/JorisJonkers-dev/projects/2'
     'secrets':
