@@ -33,9 +33,10 @@
 
 'jobs':
   'add-to-project':
-    'uses': 'JorisJonkers-dev/github-workflows/.github/workflows/add-to-project.yml@main'
+    'uses': 'JorisJonkers-dev/github-workflows/.github/workflows/add-to-project.yml@f8f0a5ae583913de18143bbbbe0db9ecab970435' # v0.45.0
     'with':
       'project-url': 'https://github.com/orgs/JorisJonkers-dev/projects/2'
     'secrets':
       'PROJECT_AUTOMATION_APP_ID': '${{ secrets.RELEASE_APP_ID }}'
       'PROJECT_AUTOMATION_APP_PRIVATE_KEY': '${{ secrets.RELEASE_APP_PRIVATE_KEY }}'
+      'PACKAGES_PROXY_TOKEN': '${{ secrets.PACKAGES_PROXY_TOKEN }}'
