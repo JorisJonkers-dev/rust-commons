@@ -1,0 +1,6 @@
+# Cargo ignores crate versions published less than 7 days ago, unless they are
+# already in Cargo.lock: a malicious release is usually found and pulled within
+# days (JorisJonkers-dev/workspace#167). Stable from Cargo 1.100; Cargo 1.99
+# warns that it ignores the setting and otherwise works as before.
+[registry]
+global-min-publish-age = "7 days"
