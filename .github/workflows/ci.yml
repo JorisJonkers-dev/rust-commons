@@ -24,6 +24,13 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Cargo, Python and npm packages come through the estate's package proxy, which never serves
+      # a version published less than 7 days ago (JorisJonkers-dev/workspace#167). A pull request
+      # from a fork gets no secret, and then this step does nothing.
+      - uses: JorisJonkers-dev/github-workflows/actions/setup-package-proxy@2e0d88483fbb70fdb54034c85e9930dec066f906 # v0.45.2
+        with:
+          token: ${{ secrets.PACKAGES_PROXY_TOKEN }}
+
       - uses: jdx/mise-action@v5
         with:
           cache: true
