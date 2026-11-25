@@ -29,13 +29,13 @@ jobs:
       # default GITHUB_TOKEN) so CI runs on the PR without a manual approval
       # gate. Best-effort: falls back to GITHUB_TOKEN when the App secrets or
       # installation are absent.
-      - uses: actions/create-github-app-token@v3
+      - uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
         id: app-token
         continue-on-error: true
         with:
           app-id: ${{ secrets.RELEASE_APP_ID }}
           private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
-      - uses: googleapis/release-please-action@v5
+      - uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
         id: rp
         with:
           token: ${{ steps.app-token.outputs.token || secrets.GITHUB_TOKEN }}
