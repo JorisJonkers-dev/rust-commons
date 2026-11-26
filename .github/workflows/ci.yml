@@ -27,7 +27,7 @@ jobs:
       # Cargo, Python and npm packages come through the estate's package proxy, which never serves
       # a version published less than 7 days ago (JorisJonkers-dev/workspace#167). A pull request
       # from a fork gets no secret, and then this step does nothing.
-      - uses: JorisJonkers-dev/github-workflows/actions/setup-package-proxy@48fcba8b143567e12716f4b77b9a3ab211719ffd # v0.50.1
+      - uses: JorisJonkers-dev/github-workflows/actions/setup-package-proxy@658bec7f448631fbaa3f28d3a2e5708390e0c4c1 # v0.51.0
         with:
           token: ${{ secrets.PACKAGES_PROXY_TOKEN }}
 
