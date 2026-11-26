@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/JorisJonkers-dev/rust-commons/compare/v0.1.1...v0.1.2) (2026-11-26)
+
+
+### Bug Fixes
+
+* **deps:** pin dependencies ([#15](https://github.com/JorisJonkers-dev/rust-commons/issues/15)) ([2b43547](https://github.com/JorisJonkers-dev/rust-commons/commit/2b43547bc8c043982b1f63591d63ba9f9fd624e9))
+
 ## [0.1.1](https://github.com/JorisJonkers-dev/rust-commons/compare/v0.1.0...v0.1.1) (2026-11-12)
 
 
